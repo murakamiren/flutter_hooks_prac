@@ -15,7 +15,7 @@ class HomeView extends HookWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("hooks"),
+        title: const Text("hooks"),
         backgroundColor: Colors.white,
         foregroundColor: Colors.black87,
         elevation: 1,
