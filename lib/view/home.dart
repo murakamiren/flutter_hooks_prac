@@ -5,6 +5,9 @@ class HomeView extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final count = useState(0);
+    void countIncrement() {
+      count.value++;
+    }
 
     return Scaffold(
       appBar: AppBar(
@@ -19,13 +22,7 @@ class HomeView extends HookWidget {
           Center(
             child: Text("hello hooks count: ${count.value.toString()}"),
           ),
-          FloatingActionButton(
-            onPressed: () {
-              count.value++;
-            },
-            tooltip: "increment",
-            child: const Icon(Icons.add),
-          )
+          TextButton(onPressed: countIncrement, child: Text("tap to increment"))
         ],
       ),
     );
