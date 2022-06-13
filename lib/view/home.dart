@@ -9,6 +9,10 @@ class HomeView extends HookWidget {
       count.value++;
     }
 
+    void resetCount() {
+      count.value = 0;
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text("hooks"),
@@ -22,7 +26,14 @@ class HomeView extends HookWidget {
           Center(
             child: Text("hello hooks count: ${count.value.toString()}"),
           ),
-          TextButton(onPressed: countIncrement, child: Text("tap to increment"))
+          TextButton(
+            onPressed: countIncrement,
+            child: const Text("tap to increment"),
+          ),
+          TextButton(
+            onPressed: resetCount,
+            child: const Text("reset"),
+          ),
         ],
       ),
     );
