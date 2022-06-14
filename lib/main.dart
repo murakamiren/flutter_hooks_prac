@@ -13,6 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "flutter hooks prac",
+      theme: ThemeData(
+        primaryColor: Colors.amber.shade400,
+        errorColor: Colors.red.shade400,
+      ),
+      darkTheme: ThemeData.dark(),
       home: HomeView(),
     );
   }

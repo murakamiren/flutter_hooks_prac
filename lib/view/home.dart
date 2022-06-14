@@ -16,23 +16,33 @@ class HomeView extends HookWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("hooks"),
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black87,
         elevation: 1,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
-            child: Text("hello hooks count: ${count.value.toString()}"),
+            child: Text(
+              "hello hooks count: ${count.value.toString()}",
+              style: const TextStyle(
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
           TextButton(
             onPressed: countIncrement,
-            child: const Text("tap to increment"),
+            child: Text(
+              "tap to increment",
+              style: TextStyle(color: Theme.of(context).primaryColor),
+            ),
           ),
           TextButton(
             onPressed: resetCount,
-            child: const Text("reset"),
+            child: Text(
+              "reset",
+              style: TextStyle(color: Theme.of(context).errorColor),
+            ),
           ),
         ],
       ),
